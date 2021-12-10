@@ -59,7 +59,7 @@ def main():
 def generate_dataloaders():
     train_transforms = torchvision.transforms.Compose([torchvision.transforms.RandomResizedCrop(224), torchvision.transforms.RandomHorizontalFlip(), torchvision.transforms.ToTensor(), torchvision.transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))])
 
-    test_transforms = torchvision.transforms.Compose([torchvision.transforms.Resize(size=(224, 224)), .transforms.RandomHorizontalFlip(), torchvision.transforms.ToTensor(), torchvision.transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))])
+    test_transforms = torchvision.transforms.Compose([torchvision.transforms.Resize(size=(224, 224)), torchvision.transforms.RandomHorizontalFlip(), torchvision.transforms.ToTensor(), torchvision.transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))])
     index = np.arange(50000)
     np.random.shuffle(index)
     train_index = index[:EPOCH_SIZE]
