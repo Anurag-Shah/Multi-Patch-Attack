@@ -1,0 +1,1 @@
+Dummy file. Place your imagenet data here before executing valprep.sh.
